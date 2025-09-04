@@ -6,6 +6,7 @@
 * Sankaku ([Old](https://chan.sankakucomplex.com/), [New](https://sankaku.app/))
 * Konachan ([SFW](https://konachan.net), [NSFW](https://konachan.com/))
 * [yande.re](https://yande.re/url)
+* [pixiv](https://pixiv.net)
 
 # Очень важно!!!
 Скрипты используют *имя_пользователя, api_ключ и user_id* для загрузки. 
@@ -13,10 +14,12 @@
 Sankaku использует *логин/пароль* для авторизации.
 >yande.re не использует никакой авторизации.
 
-Для загрузки с Danbooru и Konachan должен быть установлен браузер Google Chrome и [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/). Для более старых версий браузера скачать chromedriver можно [здесь](https://github.com/jsnjack/chromedriver/releases). **(ОБЯЗАТЕЛЬНО ТОЙ ЖЕ ВЕРСИИ, ЧТО И БРАУЗЕР)**.
+Для pixiv используется refresh_token, который скрипт получает при авторизации через встроенный браузер впервые (и каждый последующий раз, когда сессия протухает)
+
+Для загрузки с Danbooru, Konachan и pixiv должен быть установлен браузер Google Chrome и [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/). Для более старых версий браузера скачать chromedriver можно [здесь](https://github.com/jsnjack/chromedriver/releases). **(ОБЯЗАТЕЛЬНО ТОЙ ЖЕ ВЕРСИИ, ЧТО И БРАУЗЕР)**.
 Chromedriver нужно распаковать в папку со скриптом, чтобы итоговый путь выглядел так:
 
-`.../Batch Booru Downloader/chromedriver/chromedriver.exe`
+`.../Batch Booru Downloader v1.1/chromedriver.exe`
 > В скрипт интегрирована версия для ***моего*** браузера (v126.0.6478.127)
 
 # Известные проблемы
@@ -24,13 +27,13 @@ Chromedriver нужно распаковать в папку со скрипто
 * У Sankaku не отображается скорость загрузки. С чем связано и как починить - не знаю. У остальных сайтов такой проблемы нет.
 
 ## Инструкция по работе со скриптом
-Прежде всего хочу отметить, что хоть у скрипта есть интерфейс `booru_gui.py`, Вы также можете запускать `xxxxxx_downloader.py` руками, предварительно наполнив нужный буфер ссылками.
-> Ссылки, которые скрипт будет брать, расположены в `.../Batch Booru Downloader/Links/xxxxx_links.txt`.
+Прежде всего хочу отметить, что хоть у скрипта есть интерфейс `booru_gui.py`, Вы также можете запускать `/scripts/xxxxxx_downloader.py` руками, предварительно наполнив нужный буфер ссылками.
+> Ссылки, которые скрипт будет брать, расположены в `.../Batch Booru Downloader/links/xxxxx.txt`.
 
 0) Убедитесь, что у вас установлен [Python](https://www.python.org/downloads/) и [Google Chrome](https://www.google.com/intl/ru/chrome/?standalone=1)
    > Ссылка на Google Chrome ведёт на страницу с загрузкой оффлайн-установщика
 1) Откройте командную строку в папке со скриптами (Нажать на адресную строку в проводнике, написать cmd и нажать Enter)
-2) В командной строке напишите `pip install -r libs.txt`, дождитесь установки необходимых библиотек. После установки `libs.txt` можно удалить.
+2) В командной строке напишите `pip install requests selenium beautifulsoup4 pixivpy3 Pillow gppt`, дождитесь установки необходимых библиотек.
 3) Откройте `settings.json`. Укажите все данные для тех сайтов, с которых Вы собираетесь загружать. Ни в коем случае не оставлять какие-то переменные пустыми, иначе `booru_gui.py` не будет запускаться. Не забудьте сохранить изменения.
 4) Запустите `booru_gui.py` (или любой из загрузочных скриптов; сначала выполните шаг ниже). 
   > Если был открыт gui, выберите желаемый загрузчик в панели сверху, после чего перейдите во вкладку ссылки и вставьте ссылки на посты, по одной на строку. Пустые строки допускаются.
