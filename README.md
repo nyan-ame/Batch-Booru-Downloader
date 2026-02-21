@@ -19,7 +19,7 @@ Sankaku использует *логин/пароль* для авторизац
 Для загрузки с Danbooru, Konachan и pixiv должен быть установлен браузер Google Chrome и [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/). Для более старых версий браузера скачать chromedriver можно [здесь](https://github.com/jsnjack/chromedriver/releases). **(ОБЯЗАТЕЛЬНО ТОЙ ЖЕ ВЕРСИИ, ЧТО И БРАУЗЕР)**.
 Chromedriver нужно распаковать в папку со скриптом, чтобы итоговый путь выглядел так:
 
-`.../Batch Booru Downloader v1.1/chromedriver.exe`
+`.../Batch Booru Downloader/chromedriver.exe`
 > В скрипт интегрирована версия для ***моего*** браузера (v126.0.6478.127)
 
 # Известные проблемы
