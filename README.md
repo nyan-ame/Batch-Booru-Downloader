@@ -7,13 +7,13 @@
 * Konachan ([SFW](https://konachan.net), [NSFW](https://konachan.com/))
 * [yande.re](https://yande.re/url)
 * [pixiv](https://pixiv.net)
+* [Twitter](x.com)
 
 # Очень важно!!!
 Скрипты используют *имя_пользователя, api_ключ и user_id* для загрузки. 
 
 Sankaku использует *логин/пароль* для авторизации.
->yande.re не использует никакой авторизации.
-
+>yande.re/twitter в авторизации не нуждаются.
 Для pixiv используется refresh_token, который скрипт получает при авторизации через встроенный браузер впервые (и каждый последующий раз, когда сессия протухает).
 
 Для загрузки с Danbooru, Konachan и pixiv должен быть установлен браузер Google Chrome и [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/). Для более старых версий браузера скачать chromedriver можно [здесь](https://github.com/jsnjack/chromedriver/releases). **(ОБЯЗАТЕЛЬНО ТОЙ ЖЕ ВЕРСИИ, ЧТО И БРАУЗЕР)**.
