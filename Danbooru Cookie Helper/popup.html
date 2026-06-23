@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danbooru Cookie Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo">DC</div>
+      <div>
+        <h1>Danbooru Cookie Helper</h1>
+        <p>Cookie из request headers для BBD</p>
+      </div>
+    </header>
+
+    <section class="status" id="status">Жду request cookie…</section>
+
+    <section class="cookies">
+      <div class="row"><span>cf_clearance</span><b id="cfState">?</b></div>
+      <div class="row"><span>_danbooru2_session</span><b id="sessionState">?</b></div>
+      <div class="row"><span>runtime timer</span><b id="timerState">?</b></div>
+      <div class="row"><span>source</span><b id="sourceState">?</b></div>
+    </section>
+
+    <textarea id="cookieBox" spellcheck="false" placeholder="Открой/обнови Danbooru, затем нажми Refresh"></textarea>
+
+    <div class="buttons">
+      <button id="copyCookie">Copy cookie</button>
+      <button id="refresh">Refresh</button>
+      <button id="openDanbooru">Open Danbooru</button>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

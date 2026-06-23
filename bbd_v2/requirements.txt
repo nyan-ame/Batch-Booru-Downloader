@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pixivpy3
+Pillow
+yt-dlp
+gppt
+curl_cffi
+textual
+playwright

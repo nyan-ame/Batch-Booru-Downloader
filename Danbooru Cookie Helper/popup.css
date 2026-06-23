@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0d12;
+  --panel: #141824;
+  --line: #2b3448;
+  --text: #e6ecff;
+  --muted: #93a0bd;
+  --ok: #45f58b;
+  --bad: #ff5d8f;
+  --warn: #ffd166;
+  --accent: #74d4ff;
+}
+* { box-sizing: border-box; }
+body {
+  width: 380px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.35 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+main { padding: 14px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.logo {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border: 1px solid var(--accent); border-radius: 10px;
+  color: var(--accent); font-weight: 800; letter-spacing: .5px;
+  box-shadow: 0 0 18px rgba(116, 212, 255, .12);
+}
+h1 { margin: 0; font-size: 15px; }
+p { margin: 2px 0 0; color: var(--muted); }
+.status, .cookies, textarea {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+}
+.status { padding: 9px; margin-bottom: 10px; color: var(--muted); }
+.status.ok { color: var(--ok); border-color: rgba(69,245,139,.45); }
+.status.bad { color: var(--bad); border-color: rgba(255,93,143,.45); }
+.status.warn { color: var(--warn); border-color: rgba(255,209,102,.45); }
+.cookies { padding: 8px 10px; margin-bottom: 10px; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; }
+.row span { color: var(--muted); }
+b.ok { color: var(--ok); } b.bad { color: var(--bad); } b.warn { color: var(--warn); }
+textarea {
+  width: 100%; min-height: 92px; resize: vertical; padding: 9px;
+  color: var(--text); outline: none; margin-bottom: 10px;
+}
+.buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#openDanbooru { grid-column: 1 / -1; }
+button {
+  border: 1px solid var(--line); border-radius: 8px; padding: 8px 9px;
+  background: #1c2231; color: var(--text); cursor: pointer;
+  font: inherit;
+}
+button:hover { border-color: var(--accent); color: var(--accent); }
+button:active { transform: translateY(1px); }

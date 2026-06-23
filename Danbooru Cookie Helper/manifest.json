@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Danbooru Cookie Helper",
+  "version": "0.1.0",
+  "description": "Copies Danbooru Cloudflare/session cookies for Batch Booru Downloader.",
+  "permissions": [
+    "cookies",
+    "clipboardWrite",
+    "tabs",
+    "https://danbooru.donmai.us/*",
+    "https://*.donmai.us/*",
+    "webRequest",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Danbooru Cookie Helper",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.svg"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  }
+}
